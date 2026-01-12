@@ -1,6 +1,6 @@
-import mongoose from `mongoose`;
+import mongoose from 'mongoose';
 
-MONGO_URI = 'mongodb://localhost:27017/taller-clases';
+const MONGO_URI = 'mongodb://localhost:27017/taller-clases';
 
 const dbConnection  = async () => {
 

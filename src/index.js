@@ -1,5 +1,5 @@
-import express from `express`;
-import dbConnection from "./config/mongo.config";
+import express from 'express';
+import dbConnection from "./config/mongo.config.js";
 
 const app = express();
 const PORT = 3000;

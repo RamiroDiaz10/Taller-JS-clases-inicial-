@@ -6,7 +6,8 @@
     "API",
     "node",
     "express",
-    "bcrypt"
+    "bcrypt",
+    "jwt"
   ],
   "homepage": "https://github.com/RamiroDiaz10/Taller-JS-clases-inicial-#readme",
   "bugs": {
@@ -24,8 +25,9 @@
     "dev": "node --watch ./src/index.js"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "moongose": "^1.0.0"
-  },
-  "devDependencies": {}
+  }
 }
