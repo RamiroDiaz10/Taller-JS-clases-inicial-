@@ -14,6 +14,10 @@ const dbGetUserById = async (_id) => {
 const dbGetUserByEmail = async ( email ) => {
     return await userModel.findOne({ email });
 }
+const dbDeleteUserById = async ( _id) => {
+    return await userModel.findOneAndDelete({_id});
+}
+
 const dbUserUpdate = async (id, userUpdate) => {
     return await userModel.findByIdAndUpdate (
         id,
@@ -28,6 +32,7 @@ export {
     dbGetAllUser,
     dbGetUserById,
     dbGetUserByEmail,
+    dbDeleteUserById,
     dbUserUpdate
 
 }
