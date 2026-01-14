@@ -35,9 +35,11 @@ const userSchema = new Schema({
     createDate: {
         type: Date,
         default: new Date().now
-    },
-        versionKey: false,
-        timestamps:true
+    }
+    
+
+   
+    
     
 });
 

@@ -1,5 +1,5 @@
-import { verifyEncriptedPassword } from "../helpers/bcrypt.helper";
-import { generateToken } from "../helpers/jwt.helper";
+import { verifyEncriptedPassword } from "../helpers/bcrypt.helper.js";
+import { generateToken } from "../helpers/jwt.helper.js";
 import { dbGetUserByEmail } from "../service/user.service.js";
 
 const loginUser = async ( req, res) => {
