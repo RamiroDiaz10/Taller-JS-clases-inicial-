@@ -10,6 +10,16 @@ dbConnection();
 
 app.use(express.json());
 
+
+app.get('/health', (req,res) =>{
+
+    res.json({
+        path:'/health',
+        msg: 'welcome to creations-kmg'
+    });
+});
+
+
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', userRoute );
 

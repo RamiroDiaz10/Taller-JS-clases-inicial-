@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import { ALLOWED_ROLES, ROLES } from "../config/global.config.js";
 
 const userSchema = new Schema({
     name: {
@@ -21,25 +22,24 @@ const userSchema = new Schema({
         minLength: 8 
 
     },
-    role: {
+   role: {
         type: String,
-        required: true,
-        enum: [ 'super-admin', 'admin', 'colaborator', 'registered'  ],
-        default: 'registered'
+        enum: ALLOWED_ROLES,
+        default: ROLES.REGISTERED
     },
     isActive: {
         type: Boolean,
         default: true
-
     },
-    createDate: {
-        type: Date,
-        default: new Date().now
+    activationCode: {
+        type: String,
+        trim: true,
+        default: null
     }
-    
-
    
-    
+    }, {
+    versionKey: false,             
+    timestamps: true 
     
 });
 
