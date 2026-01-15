@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 const generateToken = (payload) => {
     const token = jwt.sign(
         payload,
-        'fuckejjeje',
+        process.env.JWT_SEED ,
         {expiresIn: '1h'}
 
     );
@@ -14,7 +14,7 @@ const generateToken = (payload) => {
 const verifyToken = (token) => {
     return jwt.verify(
         token,
-        'fuckejjeje'
+        process.env.JWT_SEED
     );
 
 }
